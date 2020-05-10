@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fa"
+    tools:context=".Login">
+
+    <EditText
+
+        android:id="@+id/emailt"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="92dp"
+        android:background="#EFE3E3"
+        android:hint="Enter Email"
+        android:textColor="#131313"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#0B0B0B"
+        android:textColorLink="#0E0D0D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="200dp" />
+
+    <EditText
+
+        android:id="@+id/Passwordt"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:background="#EFE3E3"
+        android:hint="Enter Password"
+        android:textColor="#101010"
+        android:textColorHighlight="#100F0F"
+        android:textColorHint="#201E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailt"
+        app:layout_constraintVertical_bias="0.036"
+        app:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Passwordt" />
+
+    <Button
+        android:id="@+id/askSignup"
+        android:layout_width="211dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="104dp"
+        android:text="Click Here to Signout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintVertical_bias="0.607" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
