@@ -11,7 +11,7 @@
 
     <TextView
 
-        android:id="@+id/Futsalapp"
+        android:id="@+id/textView"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -26,28 +26,12 @@
     <ImageView
 
         android:id="@+id/imageView"
-        android:layout_width="109dp"
-        android:layout_height="92dp"
+        android:layout_width="159dp"
+        android:layout_height="67dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:background="#FFFFFF"
         android:src="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/signup_fullname"
-        android:layout_width="283dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="#120F0F"
-        android:backgroundTint="#171515"
-        android:hint="Enter Fullname"
-        android:textColor="#EFE6E6"
-        android:textColorHighlight="#F3EFEF"
-        android:textColorHint="#F4E9E9"
-        android:textColorLink="#CDA3A3" />
-
-
 
     <EditText
         android:id="@+id/signup_email_id"
@@ -94,20 +78,21 @@
         android:textColorLink="#2C2828" />
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/register"
         android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:onClick="signUp"
-        android:text="SIGN UP" />
+        android:text="Register" />
 
     <Button
-        android:id="@+id/signup_id"
+        android:id="@+id/register_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Already Register?Login Here"/>
+
 
 
 </LinearLayout>

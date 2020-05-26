@@ -5,41 +5,45 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/fa"
+    android:background="@drawable/front"
     tools:context=".Login">
 
-    <EditText
+    <TextView
         android:layout_width="275dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="30dp"
-        android:background="#C4ED93"
+        android:background="#32332F"
         android:gravity="center"
-        android:text="LOGIN"
-        android:textColorHint="#272222"
+        android:text="Futsal App"
+        android:textColor="#EFE2E2"
+        android:textColorHint="#F6E9E9"
         android:textSize="30dp" />
 
     <EditText
         android:id="@+id/login_email_id"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="57dp"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="70dp"
+        android:background="#E0E8D6"
         android:hint="Enter email address"
         android:textColorHint="#1B1A1A" />
 
     <EditText
         android:id="@+id/login_password_id"
-        android:layout_width="275dp"
-        android:layout_height="38dp"
+        android:layout_width="278dp"
+        android:layout_height="57dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
+        android:background="#EDEFEA"
         android:hint="Enter Password"
         android:textColorHint="#121111"
         android:textSize="18sp" />
 
     <Button
+        android:id="@+id/login_id"
         android:layout_width="163dp"
         android:layout_height="38dp"
         android:layout_gravity="center"
@@ -47,7 +51,28 @@
         android:background="#E1E4DE"
         android:hint="Login"
         android:onClick="Login"
+        android:textColor="#131313"
         android:textColorHint="#201E1E"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/createText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Create  Account"
+        android:textColor="#060F13"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/forgot_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Forgot Password"
+        android:textColor="#060F13"
+        android:layout_marginTop="10dp"
         android:textSize="24sp" />
 
 </LinearLayout>
