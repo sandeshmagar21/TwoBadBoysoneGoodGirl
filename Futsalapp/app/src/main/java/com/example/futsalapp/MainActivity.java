@@ -18,7 +18,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-
     private FirebaseAuth mAuth;
     private EditText signup_fullname,signup_email, signup_pass,signup_confirm_pass;
     private Button mSignupBtn,  mLoginBtn;
@@ -41,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         
-        if (mAuth.getCurrentUser() != null){
-            startActivity(new Intent(MainActivity.this,Login.class));
-            finish();
+       if (mAuth.getCurrentUser() != null){
+           startActivity(new Intent(MainActivity.this,Login.class));
+           finish();
         }
 
 
@@ -93,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+
                             // Sign in success, update UI with the signed-in user's information
                             startActivity(new Intent (getApplicationContext(), homeActivity.class));
 

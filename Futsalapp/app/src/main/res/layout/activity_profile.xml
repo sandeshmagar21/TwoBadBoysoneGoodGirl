@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/geq"
         tools:context=".profile">
 
         <androidx.constraintlayout.widget.Guideline
@@ -31,7 +32,7 @@
             android:layout_height="515dp"
             android:layout_marginTop="56dp"
             android:layout_marginEnd="13dp"
-            android:background="#575B71"
+            android:background="#06575B71"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +54,13 @@
             android:id="@+id/Profile_Name"
             android:layout_width="305dp"
             android:layout_height="62dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="32dp"
             android:background="#F8EEEE"
             android:text="Name"
             android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view" />
 
@@ -66,15 +69,16 @@
             android:layout_width="305dp"
             android:layout_height="62dp"
             android:layout_marginStart="72dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="56dp"
             android:layout_marginEnd="34dp"
             android:background="#F8E8E8"
             android:text="Phone Number"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Profile_Name" />
+
 
         <TextView
             android:id="@+id/Profile_email"
@@ -99,6 +103,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Profile_email" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="333dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foot"
+    android:background="@drawable/xs"
     android:orientation="vertical"
     android:paddingBottom="30dp"
     tools:context=".MainActivity">
@@ -33,21 +33,21 @@
         android:background="#FFFFFF"
         android:src="@drawable/logo" />
 
+
     <EditText
         android:id="@+id/signup_fullname"
         android:layout_width="283dp"
         android:layout_height="47dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:background="#120F0F"
+        android:background="#520C0C0C"
         android:backgroundTint="#171515"
         android:hint="Enter Fullname"
+        android:inputType="text"
         android:textColor="#EFE6E6"
         android:textColorHighlight="#F3EFEF"
         android:textColorHint="#F4E9E9"
-        android:textColorLink="#CDA3A3" />
-
-
+        android:textColorLink="#2DCDA3A3" />
 
     <EditText
         android:id="@+id/signup_email_id"
@@ -55,14 +55,14 @@
         android:layout_height="47dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:background="#120F0F"
+        android:background="#520C0C0C"
         android:backgroundTint="#171515"
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
         android:textColor="#EFE6E6"
         android:textColorHighlight="#F3EFEF"
         android:textColorHint="#F4E9E9"
-        android:textColorLink="#CDA3A3" />
+        android:textColorLink="#2C2828" />
 
     <EditText
         android:id="@+id/signup_pass_id"
@@ -70,14 +70,14 @@
         android:layout_height="47dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:background="#100F0F"
+        android:background="#520C0C0C"
         android:foregroundTint="#120D0D"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="#EFE6E6"
         android:textColorHighlight="#F3EFEF"
         android:textColorHint="#F4EBEB"
-        android:textColorLink="#090909" />
+        android:textColorLink="#2C2828" />
 
     <EditText
         android:id="@+id/signup_confirmPass_id"
@@ -85,7 +85,7 @@
         android:layout_height="47dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:background="#0C0C0C"
+        android:background="#520C0C0C"
         android:hint="Enter Confirm Password"
         android:inputType="textPassword"
         android:textColor="#EFE6E6"
@@ -96,7 +96,7 @@
     <Button
         android:id="@+id/signup"
         android:layout_width="195dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:onClick="signUp"
@@ -107,7 +107,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Already Register?Login Here"/>
+        android:onClick="Login"
+        android:text="Already Register?Login Here" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

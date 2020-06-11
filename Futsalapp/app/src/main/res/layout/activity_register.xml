@@ -1,98 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foot"
-    android:orientation="vertical"
-    android:paddingBottom="30dp"
-    tools:context=".MainActivity">
+    android:background="@android:color/black">
 
-    <TextView
-
-        android:id="@+id/textView"
-        android:layout_width="291dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Futsal App"
-        android:textAlignment="center"
-        android:textColor="#FFEB3B"
-        android:textColorHighlight="#8BC34A"
-        android:textColorHint="#E91E63"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ImageView
-
-        android:id="@+id/imageView"
-        android:layout_width="159dp"
-        android:layout_height="67dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="#FFFFFF"
-        android:src="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/signup_email_id"
-        android:layout_width="283dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="#120F0F"
-        android:backgroundTint="#171515"
-        android:hint="Enter Email Address"
-        android:inputType="textEmailAddress"
-        android:textColor="#EFE6E6"
-        android:textColorHighlight="#F3EFEF"
-        android:textColorHint="#F4E9E9"
-        android:textColorLink="#CDA3A3" />
-
-    <EditText
-        android:id="@+id/signup_pass_id"
-        android:layout_width="283dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="#100F0F"
-        android:foregroundTint="#120D0D"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:textColor="#EFE6E6"
-        android:textColorHighlight="#F3EFEF"
-        android:textColorHint="#F4EBEB"
-        android:textColorLink="#090909" />
-
-    <EditText
-        android:id="@+id/signup_confirmPass_id"
-        android:layout_width="283dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="#0C0C0C"
-        android:hint="Enter Confirm Password"
-        android:inputType="textPassword"
-        android:textColor="#EFE6E6"
-        android:textColorHighlight="#F3EFEF"
-        android:textColorHint="#F4E9E9"
-        android:textColorLink="#2C2828" />
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:onClick="signUp"
-        android:text="Register" />
-
-    <Button
-        android:id="@+id/register_id"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Already Register?Login Here"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/dark"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        tools:context=".MainActivity">
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            android:text="Futsal App"
+            android:textAlignment="center"
+            android:textColor="#ADF1F5F8"
+            android:textColorHighlight="#8BC34A"
+            android:textColorHint="#E91E63"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+
+            android:id="@+id/imageView"
+            android:layout_width="92dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/logo"
+            tools:srcCompat="@drawable/soccer" />
+
+        <EditText
+            android:id="@+id/signup_fullname"
+            android:layout_width="283dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#C1120F0F"
+            android:backgroundTint="#171515"
+            android:hint="Enter Fullname"
+            android:paddingStart="@dimen/cardview_compat_inset_shadow"
+            android:textColor="#FAECDDDD"
+            android:textColorHighlight="#00E6DFDF"
+            android:textColorHint="#EFE6E6"
+            android:textColorLink="#F1E9E9" />
+
+        <EditText
+            android:id="@+id/signup_phonenumber"
+            android:layout_width="283dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#BE120F0F"
+            android:backgroundTint="#171515"
+            android:hint="Enter Phone number"
+            android:textColor="#EFE6E6"
+            android:textColorHighlight="#F3EFEF"
+            android:textColorHint="#EFE0E0"
+            android:textColorLink="#CDA3A3" />
+
+        <EditText
+            android:id="@+id/signup_email_id"
+            android:layout_width="283dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#E5120F0F"
+            android:backgroundTint="#B9171515"
+            android:hint="Enter Email Address"
+            android:inputType="textEmailAddress"
+            android:textColor="#EFE6E6"
+            android:textColorHighlight="#F3EFEF"
+            android:textColorHint="#F4E9E9"
+            android:textColorLink="#CDA3A3" />
+
+        <EditText
+            android:id="@+id/signup_pass_id"
+            android:layout_width="283dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#A1100F0F"
+            android:foregroundTint="#120D0D"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="#EFE6E6"
+            android:textColorHighlight="#F3EFEF"
+            android:textColorHint="#F4EBEB"
+            android:textColorLink="#090909" />
+
+        <EditText
+            android:id="@+id/signup_confirmPass_id"
+            android:layout_width="283dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="#800C0C0C"
+            android:hint="Enter Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="#EFE6E6"
+            android:textColorHighlight="#F3EFEF"
+            android:textColorHint="#F4E9E9"
+            android:textColorLink="#2C2828" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:onClick="signUp"
+            android:text="Register" />
+
+        <Button
+            android:id="@+id/register_id"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Already Register?Login Here" />
 
 
-
+    </LinearLayout>
 </LinearLayout>

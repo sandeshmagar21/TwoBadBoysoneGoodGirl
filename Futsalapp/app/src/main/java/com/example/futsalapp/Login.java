@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Button loginBtn;
     private TextView CreateBtn, Forgotpassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +64,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            startActivity(new Intent(Login.this,homeActivity.class));
+                            startActivity(new Intent(Login.this, homeActivity.class));
                             Toast.makeText(Login.this, "Login Success", Toast.LENGTH_SHORT).show();
                         } else {
                             // If sign in fails, display a message to the user.
@@ -71,16 +72,18 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
-        CreateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Login.this,homeActivity.class));
-            }
-        });
+        //CreateBtn.setOnClickListener(new View.OnClickListener() {
+        //// @Override
+        // public void onClick(View v) {
+        // startActivity(new Intent(Login.this,MainActivity.class));
+
+        //  }
+        // });
+///Forgot PAssword
         Forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              final EditText resetMail = new EditText(v.getContext());
+                final EditText resetMail = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
                 passwordResetDialog.setTitle("Reset Password");
                 passwordResetDialog.setMessage("Enter your email to received reset link");
@@ -89,12 +92,18 @@ public class Login extends AppCompatActivity {
                 passwordResetDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
                         //extract the email and reset
                         String mail = resetMail.getText().toString();
                         mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Login.this, "Reset link sent to your email", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Login.this, "Error ! Reset Link is not sent " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -110,6 +119,36 @@ public class Login extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void CreateAccount(View view) {
+        startActivity(new Intent(getApplicationContext(), Register.class));
+
+    }
+
+    //Exit
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage(" are you sure want to Exit")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Login.super.onBackPressed();
+
+                    }
+                })
+                .setNegativeButton(" No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
 
     }
 }
